@@ -1,12 +1,12 @@
 #headline {
     margin: auto;
-    background: antiquewhite;
-    font-family: 'Courier New', Courier, monospace;
+    background: #1c1d25;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     font-weight: 100;
-    padding: 10px 10px;
-    text-decoration-color: antiquewhite;
+    color: antiquewhite;
     font-size: larger;
-    height: 50px;
-    width: auto;
+    height: 40px;
+    width: 1000px;
+    border-radius: 25px;
 }
