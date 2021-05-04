@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="ang.js"></script>
+    <link rel="stylesheet" href="fileup.css">
+
+</head>
+<body>
+    <div id="headline">
+        <h2>File Uploader</h2>
+    </div>
+    <div id="normalpara" ng-controller="datecontroller">
+        <u>Submission time start: </u><h3>{{getDate1 | date :"medium"}}</h3> <br>
+            <u>Submission time End: </u><h3>{{getDate2 | date :"medium"}}</h3>   
+    </div>
+</body>
+</html>
