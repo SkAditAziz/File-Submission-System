@@ -12,6 +12,7 @@
 }
 
 #normalpara {
+    margin-top: 10px;
     border: rgb(255, 127, 127);
     margin-left: 200px;
     text-align: left;
@@ -19,3 +20,28 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
+
+#tick{
+    font-weight: bold;
+    color:crimson;
+    margin-top: 20px;
+    font-size:xx-large;
+    border: rgb(112, 201, 228);
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    margin-left: 600px;
+}
+
+#remain{
+    margin:auto;
+    font-size: xx-large;
+    text-align: center;
+    height: 40px;
+    width: 1000px;
+    background-color: rgb(166, 242, 252);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+
+}
+
