@@ -14,21 +14,31 @@
     <div id="headline">
         <h2>File Uploader</h2>
     </div>
-    <div id="normalpara" ng-controller="datecontroller">
-        <u>Submission time start: </u><h3>{{getDate1 | date :"medium"}}</h3>
-            <u>Submission time End: </u><h3>{{getDate2 | date :"medium"}}</h3>   
+    <div id="normalpara" ng-controller='myCtrl'>
+        <div class="grid-container">
+            <div class="grid-item"><b>Submission time start </b><h3>{{getDate1 | date :"medium"}}</h3></div>
+            <div class="grid-item" id="subend"><b>Submission time End </b><h3>{{getDate2 | date :"medium"}}</h3></div>
+        </div>
+           
     </div>
     <div id="remain">
         Time remaining
     </div>
-<!--
-    <div id ="tick" ng-controller="TimeCtrl">
-         {{ clock | date:'HH:mm:ss'}}
-    </div>
--->
 
-    <div id ="tick" ng-controller="myCtrl">
-        {{counter | counter | date:'HH:mm:ss'}}
+    <div id ="tick" ng-controller='myCtrl'>
+        <div ng-if="diff1 > 0">
+            <span class="animate-if">
+                Submission window is not openned yet! Please Wait!
+            </span>
+        </div>
+        <div ng-if="diff1<0 && diff2>0">
+            {{counter | counter | date:'HH:mm:ss'}}
+        </div>
+        <div ng-if="diff2 < 0">
+            <span class="animate-if">
+                Time Up!! Submission window is closed!!
+            </span>
+        </div>
     </div>
 
 
