@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Uploader</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="ang.js"></script>
-    <link rel="stylesheet" href="fileup.css">
+    <script src="/static/ang.js"></script>
+    <link rel="stylesheet" href="/static/fileup.css">
+    <script src="//unpkg.com/angular/angular.js"></script>
 
 </head>
 <body>
@@ -31,14 +32,23 @@
                 Submission window is not openned yet! Please Wait!
             </span>
         </div>
-        <div ng-if="diff1<0 && diff2>0">
-            {{counter | counter | date:'HH:mm:ss'}}
-        </div>
         <div ng-if="diff2 < 0">
             <span class="animate-if">
                 Time Up!! Submission window is closed!!
             </span>
         </div>
+        <div ng-if="diff1<0 && diff2>0">
+            {{counter | counter | date:'HH:mm:ss'}}
+            <div id="divup">
+                <h4>Please Upload a <b>{{filetype}}</b> file...</h4>
+                <input type="file" select-ng-files ng-model="up-file"/>
+                <label id="file-sub-label" for="submit-file">CHOOSE FILE</label>
+                <div ng-show="up-file.length">{{up-file.name}}</div>
+            </div>
+        
+
+        
+
     </div>
 
 

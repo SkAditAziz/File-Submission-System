@@ -1,0 +1,22 @@
+{
+  "name": "file-submition-system",
+  "version": "1.0.0",
+  "description": "File uploader (specific file type, specific time period) with angularjs, nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkAditAziz/File-Submition-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkAditAziz/File-Submition-System/issues"
+  },
+  "homepage": "https://github.com/SkAditAziz/File-Submition-System#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
