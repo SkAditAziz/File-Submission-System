@@ -15,19 +15,28 @@ app.controller('myCtrl', function($scope, $interval) {
             $scope.counter--;
     },1000);
 
-    $scope.filetype = ".pdf";
+    var validFormats = ['txt','doc','png','pdf'];
+    $scope.setFile = function(element) {
+        $scope.$apply(function($scope) {
+            $scope.theFile = element.files[0];
+            $scope.FileMessage = '';
+            var filename = $scope.theFile.name;
+            console.log(filename.length)
+            var index = filename.lastIndexOf(".");
+            var file_extension = filename.substring(index+1, filename.length);
+            console.log(file_extension)
+            if (validFormats.indexOf(file_extension.toLowerCase()) != -1)
+            {
+                console.log('File Uploaded sucessfully');
+            }
+            else {
+                $scope.theFile = '';
+                    var fmsg = "wrong";
+                    $scope.FileMessage = 'Please upload a valid type of file!!';
+            }
 
-    $scope.upload = function() {
-        var f = document.getElementById('file').files[0],
-            r = new FileReader();
-    
-        r.onloadend = function(e) {
-          var data = e.target.result;
-          //send your binary data via $http or $resource or do anything else with it
-        }
-    
-        r.readAsBinaryString(f);
-    }
+        });
+    };
 });
 
 app.directive("selectNgFiles", function() {

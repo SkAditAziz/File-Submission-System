@@ -41,9 +41,10 @@
             {{counter | counter | date:'HH:mm:ss'}}
             <div id="divup">
                 <h4>Please Upload a <b>{{filetype}}</b> file...</h4>
-                <input type="file" select-ng-files ng-model="up-file"/>
-                <label id="file-sub-label" for="submit-file">CHOOSE FILE</label>
-                <div ng-show="up-file.length">{{up-file.name}}</div>
+                <input type="file" onchange="angular.element(this).scope().setFile(this)">
+                    <p ng-if= theFile.name !=''>You have selected {{theFile.name}}! Please click on Upload!!</p>
+                    <br>  {{FileMessage}}
+                <button  ng-if= theFile.name !='' ng-click = "uploadFile()" id='upload-button'>UPLOAD</button>
             </div>
         
 
